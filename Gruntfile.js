@@ -5,15 +5,23 @@ module.exports = function(grunt) {
 	compile: {
 		options: {
 			optimize: "uglify2",
-			mainConfigFile: 'src/scripts/main.js',
+      baseUrl: "src",
+			//mainConfigFile: 'public/scripts/main.js',
 			generateSourceMaps: true,
 			preserveLicenseComments: false,
 			error: function(done, err) {
         			grunt.log.warn(err);
         			done();
-      			},
-			include: ['src/scripts/a.js'],
-			out: "stdout",
+      },
+      //out: "stdout",
+      dir: 'public/scripts',
+      modules: [
+        {
+          name: 'both',
+          create: true,
+          include: ['helper/a', 'helper/b'],
+        },
+      ],
 		}
 	}
     },

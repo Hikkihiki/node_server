@@ -9,7 +9,8 @@
   "author": "",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "express": "~4.13.4"
+    "express": "~4.13.4",
+    "requirejs": "^2.2.0"
   },
   "devDependencies": {
     "grunt-contrib-requirejs": "~1.0.0",
