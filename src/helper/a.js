@@ -3,10 +3,10 @@ define([], function() {
         return {
             color: "blue",
             size: "large",
-						yell: function() {
-							console.log('a!');
+            yell: function() {
+              console.log('a!');
               throw 'FAILED!!!';
-						}
+            }
         }
     }
 );
