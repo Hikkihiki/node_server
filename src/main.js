@@ -1,6 +1,5 @@
 requirejs.config({
     //By default load any module IDs from js/lib
-    baseUrl: 'scripts/helper',
     //except, if the module ID starts with "app",
     //load it from the js/app directory. paths
     //config is relative to the baseUrl, and
@@ -8,7 +7,7 @@ requirejs.config({
     //the paths config could be for a directory.
 });
 
-requirejs(['a', 'b'], function(a, b) {
+requirejs(['helper/a', 'helper/b'], function(a, b) {
     console.log('this is main!');
     a.yell();
     b.yell();
